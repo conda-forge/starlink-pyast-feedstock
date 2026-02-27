@@ -29,7 +29,6 @@ requirements:
     - pip
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   source_files:
