@@ -46,7 +46,7 @@ about:
   home: https://pypi.org/project/starlink-pyast/
   summary: A Python wrapper for the Starlink AST library
   dev_url: https://github.com/Starlink/starlink-pyast
-  license: LGPL-3.0-only AND BSD-3-Clause
+  license: LGPL-3.0-or-later AND BSD-3-Clause
   license_file:
     - ast/COPYING
     - ast/erfa/LICENSE
