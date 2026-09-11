@@ -1,5 +1,5 @@
 {% set name = "starlink-pyast" %}
-{% set version = "4.0.1" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/starlink_pyast-{{ version }}.tar.gz
-  sha256: 93e50eb5c05e4e3fe0e38260fbe7e25bf4354f2072657917f3c34217e0027199
+  sha256: 8389e42352a8e86ee58d8788e421072d06dd74b39822df902fec3a474d6c72b1
 
 build:
   skip: true  # [py<312 or win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -46,7 +46,7 @@ about:
   home: https://pypi.org/project/starlink-pyast/
   summary: A Python wrapper for the Starlink AST library
   dev_url: https://github.com/Starlink/starlink-pyast
-  license: LGPL-3.0-only AND BSD-3-Clause
+  license: LGPL-3.0-or-later AND BSD-3-Clause
   license_file:
     - ast/COPYING
     - ast/erfa/LICENSE
