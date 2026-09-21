@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/starlink_pyast-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/starlink_pyast-{{ version }}.tar.gz
   sha256: 8389e42352a8e86ee58d8788e421072d06dd74b39822df902fec3a474d6c72b1
 
 build:
   skip: true  # [py<312 or win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
