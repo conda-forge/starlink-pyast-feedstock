@@ -1,5 +1,5 @@
 {% set name = "starlink-pyast" %}
-{% set version = "4.1.0" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/starlink_pyast-{{ version }}.tar.gz
-  sha256: 8389e42352a8e86ee58d8788e421072d06dd74b39822df902fec3a474d6c72b1
+  sha256: a16d2e35a10a1175afca695fb503c3f5fb1db4a31b41f6e2c9df0a3c8efc733e
 
 build:
   skip: true  # [py<312 or win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
